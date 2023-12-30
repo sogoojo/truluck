@@ -1,4 +1,9 @@
+org/truluck/repository/WaybillRepository.class
 org/truluck/controller/TestController.class
-org/truluck/controller/WebConfig.class
-org/truluck/controller/WebConfig$1.class
 org/truluck/Main.class
+org/truluck/config/WebConfig.class
+org/truluck/controller/WaybillController.class
+org/truluck/model/Waybill.class
+org/truluck/config/WebConfig$1.class
+org/truluck/service/WaybillService.class
+org/truluck/model/Waybill_old.class

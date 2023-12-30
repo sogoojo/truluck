@@ -1,3 +1,8 @@
+/Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/model/Waybill.java
 /Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/controller/TestController.java
-/Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/controller/WebConfig.java
+/Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/controller/WaybillController.java
+/Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/config/WebConfig.java
+/Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/model/Waybill_old.java
 /Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/Main.java
+/Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/repository/WaybillRepository.java
+/Users/oluwasogo/Documents/Truluck/truluck/back-end/src/main/java/org/truluck/service/WaybillService.java

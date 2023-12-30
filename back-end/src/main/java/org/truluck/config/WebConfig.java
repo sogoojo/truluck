@@ -1,4 +1,4 @@
-package org.truluck.controller;
+package org.truluck.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
