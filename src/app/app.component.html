@@ -1,3 +1,4 @@
+
 <!-- Header -->
 <header class="app-header">
   <div class="header-content">
@@ -68,14 +69,14 @@
         <div class="waybill-grid-cell">Invoice Number</div>
       </div>
       <div class="waybill-grid-row" *ngFor="let waybill of mockWaybills">
-        <div class="waybill-grid-cell">{{ waybill.supervisor}}</div>
+        <div class="waybill-grid-cell">{{ waybill.supervisorName}}</div>
         <div class="waybill-grid-cell">{{ waybill.number }}</div>
-        <div class="waybill-grid-cell">{{ waybill.client }}</div>
-        <div class="waybill-grid-cell">{{ waybill.truck }}</div>
-        <div class="waybill-grid-cell">{{ waybill.trip}}</div>
-        <div class="waybill-grid-cell">{{ waybill.date | date:'shortDate' }}</div>
+        <div class="waybill-grid-cell">{{ waybill.clientName }}</div>
+        <div class="waybill-grid-cell">{{ waybill.truckNumber }}</div>
+        <div class="waybill-grid-cell">{{ waybill.tripAllowance}}</div>
+        <div class="waybill-grid-cell">{{ waybill.dateIssued | date:'shortDate' }}</div>
         <div class="waybill-grid-cell">{{ waybill.status }}</div>
-        <div class="waybill-grid-cell">{{waybill.invoice}}</div>
+        <div class="waybill-grid-cell">{{waybill.invoiceNumber}}</div>
 
       </div>
     </div>
@@ -86,31 +87,39 @@
     <div class="modal-content">
       <span class="close" (click)="closeNewJobModal()">&times;</span>
       <h2>Add New Job</h2>
-      <form>
+      <form (ngSubmit)="onSubmit(waybillForm.value)" #waybillForm="ngForm">
         <label for="truckNumber">Truck Number:</label>
-        <input type="text" id="truckNumber" name="truckNumber">
+        <input type="text" id="truckNumber" name="truckNumber" ngModel required>
 
         <label for="client">Client:</label>
-        <select id="client" name="client">
-          <!-- Option elements will be populated here -->
+        <select id="client" name="client" [(ngModel)]="newWaybill.clientName" required>
+          <option *ngFor="let client of clients" [value]="client.name">{{ client.name }}</option>
         </select>
 
         <label for="date">Date:</label>
-        <input type="date" id="date" name="date">
+        <input type="date" id="date" name="dateIssued" ngModel required>
 
-        <label for="drivername"> Driver Name:</label>
-        <input type="text" id="drivername" name="drivername">
+        <label for="drivername"> Supervisor Name:</label>
+        <input type="text" id="drivername" name="drivername" ngModel required>
 
-        <label for="waybillNumber">Waybill Number:</label>
-        <input type="text" id="waybillNumber" name="waybillNumber">
+        <label for="number">Waybill Number:</label>
+        <input type="text" id="number" name="number" ngModel required>
 
-        <button type="submit">Add Job</button>
+        <label for="tripAllowance">Trip Allowance:</label>
+        <input type="text" id="tripAllowance" name="tripAllowance" ngModel required>
+
+        <button type="submit" class="btn btn-primary">Add Job</button>
       </form>
     </div>
   </div>
 </main>
-<p>{{ greeting }}</p>
 <!-- Footer -->
 <footer class="app-footer">
   <p>© 2023 Truluck. All rights reserved.</p>
 </footer>
+
+
+<!-- Login Form Template -->
+<ng-template #redirectToLogin>
+  <!-- This template is empty because the routing handles the redirection to the login page -->
+</ng-template>
